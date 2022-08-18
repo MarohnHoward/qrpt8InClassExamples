@@ -4,9 +4,9 @@ const google = new Google()
 
 test('do a seach', async () => {
     await google.navigate()
-    await google.search('Chicago Bears')
+    await google.search('Mint Chip Ice Cream')
     let text = await google.getResults()
-    expect(text).toContain('Chicago Bears')
+    expect(text).toContain('Mint Chip Ice Cream')
     await fs.writeFile(`${__dirname}/test.txt`, text, (e) => {
         if (e) console.error(e)
         else console.log('Save Successful')
